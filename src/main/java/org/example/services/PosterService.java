@@ -21,22 +21,23 @@ public class PosterService {
         tmp[tmp.length - 1] = movie;
         movies = tmp;
     }
-        public String[] findAll() {
-            return movies;
-        }
 
-        public String[] findLast() {
-            int resultLength;
-            if (movies.length < limit) {
-                resultLength = movies.length;
-            } else {
-                resultLength = limit;
-            }
-            String[] answer = new String[resultLength];
-            for (int i = 0; i < answer.length; i++) {
-                answer[i] = movies[movies.length - 1 - i];
-
-            }
-            return answer;
-        }
+    public String[] findAll() {
+        return movies;
     }
+
+    public String[] findLast() {
+        int resultLength;
+        if (movies.length < limit) {
+            resultLength = movies.length;
+        } else {
+            resultLength = limit;
+        }
+        String[] answer = new String[resultLength];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = movies[movies.length - 1 - i];
+
+        }
+        return answer;
+    }
+}
